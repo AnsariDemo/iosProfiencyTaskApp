@@ -14,7 +14,7 @@
 #define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
 #define DESCRIPTION_WIDTH 150
 #define EXPECTED_HEIGHT 130
-#define DEFAULT_HEIGHT 170
+#define DEFAULT_HEIGHT 180
 #define OFFSET_HEIGHT 60
 
 #define MAX_HEIGHT 9999

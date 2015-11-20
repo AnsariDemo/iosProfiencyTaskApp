@@ -17,11 +17,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     //Initialise TableViewController to set as rootviewcontroller
     ListTableViewController *myTableViewController = [[ListTableViewController alloc] initWithStyle:UITableViewStylePlain];
     UINavigationController *tableViewNavigationController = [[UINavigationController alloc] initWithRootViewController:myTableViewController];
-    
     //set rootviewcontroller
     self.window.rootViewController = tableViewNavigationController;
     [self.window makeKeyAndVisible];

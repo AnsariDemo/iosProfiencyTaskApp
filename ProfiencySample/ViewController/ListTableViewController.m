@@ -106,7 +106,7 @@
     cell.desc.text = description;
     
     //Calculate height of the text
-    CGSize descSize = CGSizeMake(SCREEN_WIDTH - 150,9999);
+    CGSize descSize = CGSizeMake(SCREEN_WIDTH - DESCRIPTION_WIDTH,9999);
     UIFont *descFont = [UIFont systemFontOfSize:DESCRIPTION_FONT];
     
     CGRect expectedDescRect = [self rectForText:description                                usingFont:descFont
