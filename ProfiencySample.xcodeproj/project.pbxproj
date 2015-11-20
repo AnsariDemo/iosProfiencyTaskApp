@@ -17,7 +17,7 @@
 		37A4BFE81BF5C1DD009D809A /* ProfiencySampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A4BFE71BF5C1DD009D809A /* ProfiencySampleTests.m */; };
 		9428421F1BFDB1BA0009E4E0 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 9428421E1BFDB1BA0009E4E0 /* Reachability.m */; };
 		942842231BFDDC1D0009E4E0 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 942842221BFDDC1D0009E4E0 /* Utils.m */; };
-		942842271BFDE2420009E4E0 /* Services.m in Sources */ = {isa = PBXBuildFile; fileRef = 942842261BFDE2420009E4E0 /* Services.m */; };
+		942842271BFDE2420009E4E0 /* ServiceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 942842261BFDE2420009E4E0 /* ServiceHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +53,8 @@
 		9428421E1BFDB1BA0009E4E0 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		942842211BFDDC1D0009E4E0 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		942842221BFDDC1D0009E4E0 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
-		942842251BFDE2410009E4E0 /* Services.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Services.h; sourceTree = "<group>"; };
-		942842261BFDE2420009E4E0 /* Services.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Services.m; sourceTree = "<group>"; };
+		942842251BFDE2410009E4E0 /* ServiceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceHelper.h; sourceTree = "<group>"; };
+		942842261BFDE2420009E4E0 /* ServiceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +137,8 @@
 			children = (
 				37A4BFCF1BF5C1DD009D809A /* AppDelegate.h */,
 				37A4BFD01BF5C1DD009D809A /* AppDelegate.m */,
-				942842241BFDDD0E0009E4E0 /* Services */,
-				942842201BFDDBF90009E4E0 /* UtilsClass */,
+				942842241BFDDD0E0009E4E0 /* ServiceHelper */,
+				942842201BFDDBF90009E4E0 /* Utility */,
 				9428421C1BFDB1BA0009E4E0 /* Reachablility */,
 				9428421A1BFDAC440009E4E0 /* Constants */,
 				370A3C4A1BF6EEFF00AE0CA4 /* ViewController */,
@@ -194,21 +194,23 @@
 			path = Reachablility;
 			sourceTree = "<group>";
 		};
-		942842201BFDDBF90009E4E0 /* UtilsClass */ = {
+		942842201BFDDBF90009E4E0 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
 				942842211BFDDC1D0009E4E0 /* Utils.h */,
 				942842221BFDDC1D0009E4E0 /* Utils.m */,
 			);
+			name = Utility;
 			path = UtilsClass;
 			sourceTree = "<group>";
 		};
-		942842241BFDDD0E0009E4E0 /* Services */ = {
+		942842241BFDDD0E0009E4E0 /* ServiceHelper */ = {
 			isa = PBXGroup;
 			children = (
-				942842251BFDE2410009E4E0 /* Services.h */,
-				942842261BFDE2420009E4E0 /* Services.m */,
+				942842251BFDE2410009E4E0 /* ServiceHelper.h */,
+				942842261BFDE2420009E4E0 /* ServiceHelper.m */,
 			);
+			name = ServiceHelper;
 			path = Services;
 			sourceTree = "<group>";
 		};
@@ -318,7 +320,7 @@
 				370A3C491BF6EEE800AE0CA4 /* CustomTableViewCell.m in Sources */,
 				37A4BFCE1BF5C1DD009D809A /* main.m in Sources */,
 				370A3C4D1BF6EEFF00AE0CA4 /* ListTableViewController.m in Sources */,
-				942842271BFDE2420009E4E0 /* Services.m in Sources */,
+				942842271BFDE2420009E4E0 /* ServiceHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,13 +13,15 @@
 #import "DetailsList.h"
 #import "Reachability.h"
 #import "Utils.h"
-#import "Services.h"
+#import "ServiceHelper.h"
 
 @interface ListTableViewController ()
 
 @end
 
 @implementation ListTableViewController
+
+#pragma ViewController Delegate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -87,7 +89,6 @@
         return DEFAULT_HEIGHT;
 }
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.resultantData.count;
 }
@@ -100,7 +101,6 @@
     DetailsList *listData = self.resultantData[indexPath.row];
     NSString *title=  listData.title.length > 0 ? listData.title : TITLE_NOT_FOUND;
     cell.title.text = title;
-    
     
     NSString *description = listData.desc.length > 0 ? listData.desc : DESCRIPTION_NOT_FOUND;
     cell.desc.text = description;
@@ -117,7 +117,6 @@
     
     // Set description frame
     cell.desc.frame = descFrame;
-    
     
     // Assign key for each images
     NSString *key =  [NSString stringWithFormat:@"%li",(long)indexPath.row];
@@ -195,7 +194,6 @@
     [cell.backgroundView.layer insertSublayer:grad atIndex:0];
 }
 
-
 //Calculate Height of Label
 -(CGRect)rectForText:(NSString *)text
            usingFont:(UIFont *)font
@@ -210,13 +208,22 @@
                                     context:nil];
 }
 
+//================================================================================
+/*
+ @method        fetchJsonFeed
+ @abstract      get the json feed from server and update data to UITablview
+ @param         nil
+ @return        void
+ */
+//================================================================================
+
 // Downloading Json feed
 -(void)fetchJsonFeed {
     
     // Check Network Connection
     if([Utils checkReachability]) {
         
-        [Services getFeedResponseForUrl:JSON_FEED_URL withCallback:^(NSDictionary *json, NSError *error) {
+        [ServiceHelper getFeedResponseForUrl:JSON_FEED_URL withCallback:^(NSDictionary *json, NSError *error) {
             
             // Initialise nsmutablearray for json feed
             self.resultantData = [[NSMutableArray alloc] init];
@@ -234,7 +241,7 @@
             }
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                
+                                    
                                     self.title = [json objectForKey:TITLE];
                                     self.tableView.delegate = self;
                                     self.tableView.dataSource = self;
@@ -244,6 +251,9 @@
             });
         }];
         
+    } else {
+        [Utils showAlert:NO_INTERNET];
+        [self.activityIndicatorView stopAnimating];
     }
 }
 
@@ -253,6 +263,15 @@
     [self.tableView reloadData];
 }
 
+//================================================================================
+/*
+ @method        refreshList
+ @abstract      Refresh the List Items
+ @param         id
+ @return        void
+ */
+//================================================================================
+
 // Refresh List Feed
 -(void)refreshList:(id)sender {
     // Refresh Json Feeds
@@ -261,6 +280,8 @@
         [self.tableView reloadData];
         [self.activityIndicatorView startAnimating];
         [self fetchJsonFeed];
+    } else {
+        [Utils showAlert:NO_INTERNET];
     }
 }
 

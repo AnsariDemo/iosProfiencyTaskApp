@@ -9,6 +9,15 @@
 #import "NSDictionary+safety.h"
 
 @implementation NSDictionary (safety)
+
+//================================================================================
+/*
+ @method        CheckForNull
+ @abstract      Checking null from server respose params
+ @param         id
+ @return        id
+ */
+//================================================================================
 - (id)safeObjectForKey:(id)aKey {
     NSObject *object = self[aKey];
     

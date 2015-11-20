@@ -12,6 +12,14 @@
 @implementation CustomTableViewCell
 
 
+//================================================================================
+/*
+ @method        initWithStyle
+ @abstract      UITableViewCell initial setup
+ @param         NSString,UITableviewStyle
+ @return        id
+ */
+//================================================================================
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
@@ -42,7 +50,14 @@
 }
 
 
-// Set Frame for layout
+//================================================================================
+/*
+ @method        Set Layout Subviews For UITableviewCell
+ @abstract      Layout Arrangement
+ @param         nil
+ @return        void
+ */
+//================================================================================
 -(void)layoutSubviews {
     
     [super layoutSubviews];

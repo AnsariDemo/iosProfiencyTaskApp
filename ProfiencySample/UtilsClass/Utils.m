@@ -2,7 +2,7 @@
 //  Utils.m
 //  ProfiencySample
 //
-//  Created by Cognizant on 11/19/15.
+//  Created by Ansari on 11/19/15.
 //  Copyright (c) 2015 Ansari. All rights reserved.
 //
 
@@ -10,6 +10,15 @@
 #import "Constants.h"
 
 @implementation Utils
+
+//================================================================================
+/*
+ @method        ShowAlert
+ @abstract      alert showing to the customer
+ @param         NSString
+ @return        void
+ */
+//================================================================================
 
 // Alert Dialog
 +(void)showAlert:(NSString *)text {
@@ -20,6 +29,15 @@
                                           otherButtonTitles:nil,nil];
     [alert show];
 }
+
+//================================================================================
+/*
+ @method        checkReachability
+ @abstract      Checking Internet Connectivity
+ @param         Nil
+ @return        Bool
+ */
+//================================================================================
 
 // Check Internet Connection
 +(BOOL) checkReachability {

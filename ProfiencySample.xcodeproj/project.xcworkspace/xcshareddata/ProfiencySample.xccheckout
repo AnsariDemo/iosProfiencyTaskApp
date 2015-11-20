@@ -10,31 +10,43 @@
 	<string>ProfiencySample</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>79A7FE4E57CB6A0CDC24A19817A727D313D1AF4A</key>
-		<string>https://github.com/AnsariDemo/iOSProficiencyTest.git</string>
+		<key>0775842A24D6F02357282C6FFC73A6C8B4054148</key>
+		<string>https://github.com/AnsariDemo/iOSAppTest.git</string>
+		<key>9AB57338D58D3C2217DB94A54789EA40451F8205</key>
+		<string>https://github.com/AnsariDemo/iosProfiencyTaskApp.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>ProfiencySample.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>79A7FE4E57CB6A0CDC24A19817A727D313D1AF4A</key>
+		<key>0775842A24D6F02357282C6FFC73A6C8B4054148</key>
+		<string>../../../iOSAppTest</string>
+		<key>9AB57338D58D3C2217DB94A54789EA40451F8205</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/AnsariDemo/iOSProficiencyTest.git</string>
+	<string>https://github.com/AnsariDemo/iosProfiencyTaskApp.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>79A7FE4E57CB6A0CDC24A19817A727D313D1AF4A</string>
+	<string>9AB57338D58D3C2217DB94A54789EA40451F8205</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>79A7FE4E57CB6A0CDC24A19817A727D313D1AF4A</string>
+			<string>0775842A24D6F02357282C6FFC73A6C8B4054148</string>
 			<key>IDESourceControlWCCName</key>
-			<string>iOSProficiencyTest</string>
+			<string>iOSAppTest</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9AB57338D58D3C2217DB94A54789EA40451F8205</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iosProfiencyTaskApp</string>
 		</dict>
 	</array>
 </dict>

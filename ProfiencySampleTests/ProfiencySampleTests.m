@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "ListTableViewController.h"
+#import "Utils.h"
+#import "NSDictionary+safety.h"
 
 @interface ProfiencySampleTests : XCTestCase
-
+@property (nonatomic, strong) ListTableViewController *tableViewController;
 @end
 
 @implementation ProfiencySampleTests
@@ -18,6 +21,23 @@
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.tableViewController= [[ListTableViewController alloc]init];
+}
+
+#pragma mark Testing TableViewController
+
+-(void)testTableViewLoad
+{
+    XCTAssertNotNil(self.tableViewController.view, @"TableView not loaded");
+}
+
+- (void)testCheckConnection {
+    XCTAssertTrue([Utils checkReachability], @"Internet connection failed");
+}
+
+-(void)testCheckNull {
+    NSDictionary *dict = @{@"Title":@"Beavers"};
+    XCTAssertFalse([dict safeObjectForKey:dict], @"Null validation failed");
 }
 
 - (void)tearDown {

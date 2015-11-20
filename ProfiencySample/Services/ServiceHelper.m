@@ -2,16 +2,25 @@
 //  Services.m
 //  ProfiencySample
 //
-//  Created by Cognizant on 11/19/15.
+//  Created by Ansari on 11/19/15.
 //  Copyright (c) 2015 Ansari. All rights reserved.
 //
 
-#import "Services.h"
+#import "ServiceHelper.h"
 #import "Constants.h"
 #import "NSDictionary+safety.h"
 #import "DetailsList.h"
 
-@implementation Services
+@implementation ServiceHelper
+
+//================================================================================
+/*
+ @method        getFeedResponseForUrl
+ @abstract      Get Json Feed From the server
+ @param         url
+ @return        nil
+ */
+//================================================================================
 
 +(void)getFeedResponseForUrl:(NSString *)url withCallback:(CompletionBlock)callback {
     
@@ -39,8 +48,5 @@
     [task resume];
 }
 
-+(void)getImagesForUrl:(NSString *)url withCallback:(CompletionBlock)callback {
-    
-    
-}
+
 @end
